@@ -29,7 +29,7 @@ Pour plus d’informations, référez-vous au code et testez les différents cas
 cd C
 make
 ./server 6969
-./client 127.0.0.1 8088 1000000
+./client 127.0.0.1 6969 1000000
 ```
 
 ### Avec Java
@@ -37,9 +37,13 @@ make
 ```zsh
 cd JAVA
 mvn clean install
-mvn exec:java -Dexec.mainClass="com.tcpdemo.server.NettyServer" -Dexec.args="8088"
-mvn exec:java -Dexec.mainClass="com.tcpdemo.client.NettyClient" -Dexec.args="localhost 8088 1000000"
-mvn exec:java -Dexec.mainClass="com.tcpdemo.client.BadNettyClient" -Dexec.args="localhost 8088 1000000"
+mvn exec:java -Dexec.mainClass="com.tcpdemo.server.NettyServer" -Dexec.args="6969"
+mvn exec:java -Dexec.mainClass="com.tcpdemo.client.NettyClient" -Dexec.args="localhost 6969 1000000"
+//without shutdown & boucle for waiting pending data
+mvn exec:java -Dexec.mainClass="com.tcpdemo.client.BadNettyClient" -Dexec.args="localhost 6969 1000000"
+//or
+mvn exec:java -Dexec.mainClass="com.tcpdemo.server.TCPServer" -Dexec.args="6969"
+mvn exec:java -Dexec.mainClass="com.tcpdemo.client.TCPClient" -Dexec.args="localhost 6969 1000000"
 ```
 
 ## Références & Rapports de Bugs
