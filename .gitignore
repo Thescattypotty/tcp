@@ -1,0 +1,46 @@
+# Ignore Visual Studio Code files
+.vscode/
+*.code-workspace
+
+# Ignore Java build files
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.rar
+*.log
+*.junit.xml
+*.hprof
+
+# Ignore Java IDE files
+/.idea/
+/*.iml
+/*.ipr
+/*.iws
+
+# Ignore Maven files
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Ignore Gradle files
+.gradle/
+build/
+
+# Ignore C build files
+*.o
+*.obj
+*.exe
+*.out
+*.d
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
